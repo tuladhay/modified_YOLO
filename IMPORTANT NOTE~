@@ -1,0 +1,4 @@
+This is a modified YOLO.
+It has additional outputs for the estimated RPY pose from the camera image.
+
+ACTUALLY, the rpy is the x, y, and z displacement from the camera frame to the door frame.

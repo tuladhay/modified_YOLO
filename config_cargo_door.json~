@@ -1,0 +1,36 @@
+{
+    "model" : {
+        "architecture":         "Full Yolo",
+        "input_size":           416,
+        "anchors":              [0.44,1.89, 0.80,3.11, 1.11,3.68, 1.97,2.55, 3.74,4.84],
+        "max_box_per_image":    1,
+        "labels":               ["CargoDoor"]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/ubuntu/tensorflow_data/YOLO/CargoDoor/train_images/",
+        "train_annot_folder":   "/home/ubuntu/tensorflow_data/YOLO/CargoDoor/train_annotate/",     
+          
+        "train_times":          2,
+        "pretrained_weights":   "/home/ubuntu/tensorflow_data/YOLO/CargoDoor/full_yolo_cargo_door_with_pose_v4.h5",
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "nb_epoch":             5,
+        "warmup_epochs":        0,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "/home/ubuntu/tensorflow_data/YOLO/CargoDoor/full_yolo_cargo_door_with_pose_v6.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "/home/ubuntu/tensorflow_data/YOLO/CargoDoor/validate_images/",
+        "valid_annot_folder":   "/home/ubuntu/tensorflow_data/YOLO/CargoDoor/validate_annotate/",
+
+        "valid_times":          1
+    }
+}

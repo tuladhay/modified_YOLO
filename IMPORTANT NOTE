@@ -1,0 +1,2 @@
+This is a modified YOLO.
+It has additional outputs for the estimated RPY pose from the camera image.
