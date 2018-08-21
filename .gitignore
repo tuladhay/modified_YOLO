@@ -4,6 +4,7 @@
 # Python
 *.py~
 
+.idea/
 *.json~
 
 # Compiled source #
